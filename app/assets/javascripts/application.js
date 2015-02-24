@@ -22,6 +22,11 @@ setTimeout(function(){button.disabled = true;}, 1);
 }
 
 function displaySection(displayType) {
-  var section = document.getElementById("grading_scale_row");
+  var section = document.getElementById("grading_scale_rows");
+  section.lastElementChild.style.display = displayType;
+}
+
+function hideRow(displayType) {
+  var section = document.getElementById("grading_scale_single_row");
   section.lastElementChild.style.display = displayType;
 }
