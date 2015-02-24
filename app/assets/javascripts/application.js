@@ -15,18 +15,13 @@
 //= require d3
 //= require_tree .
 
+
 function disableButton() {
-  var button = document.getElementById("update_course_details_button");
-  button.disabled = true;
-  button.value = "Please wait...";
-}
-function disableFunction() {
- setTimeout(disableButton, 1);
+var button = document.getElementById("update_course_details_button");
+setTimeout(function(){button.disabled = true;}, 1);
 }
 
-// function disableFunction() {
-//  document.getElementById("update_course_details_button").disabled = true;
-// }
-// function disableButton() {
-//  setTimeout(disableFunction, 1);
-// }
+function displaySection(displayType) {
+  var section = document.getElementById("grading_scale_row");
+  section.lastElementChild.style.display = displayType;
+}
