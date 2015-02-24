@@ -14,3 +14,19 @@
 //= require jquery_ujs
 //= require d3
 //= require_tree .
+
+function disableButton() {
+  var button = document.getElementById("update_course_details_button");
+  button.disabled = true;
+  button.value = "Please wait...";
+}
+function disableFunction() {
+ setTimeout(disableButton, 1);
+}
+
+// function disableFunction() {
+//  document.getElementById("update_course_details_button").disabled = true;
+// }
+// function disableButton() {
+//  setTimeout(disableFunction, 1);
+// }
